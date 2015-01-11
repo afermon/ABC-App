@@ -9,7 +9,6 @@
         <item name="colorAccent">@color/brandPrimary</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-
         <item name="android:windowBackground">@color/myWindowBackground</item>
     </style>
 
@@ -22,4 +21,5 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
+
 </resources>

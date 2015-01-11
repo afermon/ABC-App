@@ -7,26 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Testing extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15;
+    private TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8,tv9,tv10,tv11,tv12,tv13,tv14,tv15;
     private OnFragmentInteractionListener mListener;
 
     // TODO: Rename and change types and number of parameters
-    public static Testing newInstance(String param1, String param2) {
+    public static Testing newInstance() {
         Testing fragment = new Testing();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -35,10 +26,6 @@ public class Testing extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -46,14 +33,42 @@ public class Testing extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View mView = inflater.inflate(R.layout.layout_testing, container, false);
-        Button mButton = (Button) mView.findViewById(R.id.btntest);
-        mButton.setOnClickListener(new View.OnClickListener() {
+        tv1 = (TextView) mView.findViewById(R.id.textView1);
+        tv2 = (TextView) mView.findViewById(R.id.textView2);
+        tv3 = (TextView) mView.findViewById(R.id.textView3);
+        tv4 = (TextView) mView.findViewById(R.id.textView4);
+        tv5 = (TextView) mView.findViewById(R.id.textView5);
+        tv6 = (TextView) mView.findViewById(R.id.textView6);
+        tv7 = (TextView) mView.findViewById(R.id.textView7);
+        tv8 = (TextView) mView.findViewById(R.id.textView8);
+        tv9 = (TextView) mView.findViewById(R.id.textView9);
+        tv10 = (TextView) mView.findViewById(R.id.textView10);
+        tv11 = (TextView) mView.findViewById(R.id.textView11);
+        tv12 = (TextView) mView.findViewById(R.id.textView12);
+        tv13 = (TextView) mView.findViewById(R.id.textView13);
+        tv14 = (TextView) mView.findViewById(R.id.textView14);
+        tv15 = (TextView) mView.findViewById(R.id.textView15);
 
+        btn1 = (Button) mView.findViewById(R.id.testing_btn1);
+        btn2 = (Button) mView.findViewById(R.id.testing_btn2);
+        btn3 = (Button) mView.findViewById(R.id.testing_btn3);
+        btn4 = (Button) mView.findViewById(R.id.testing_btn4);
+        btn5 = (Button) mView.findViewById(R.id.testing_btn5);
+        btn6 = (Button) mView.findViewById(R.id.testing_btn6);
+        btn7 = (Button) mView.findViewById(R.id.testing_btn7);
+        btn8 = (Button) mView.findViewById(R.id.testing_btn8);
+        btn9 = (Button) mView.findViewById(R.id.testing_btn9);
+        btn10 = (Button) mView.findViewById(R.id.testing_btn10);
+        btn11 = (Button) mView.findViewById(R.id.testing_btn11);
+        btn12 = (Button) mView.findViewById(R.id.testing_btn12);
+        btn13 = (Button) mView.findViewById(R.id.testing_btn13);
+        btn14 = (Button) mView.findViewById(R.id.testing_btn14);
+        btn15 = (Button) mView.findViewById(R.id.testing_btn15);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                if (mListener != null) {
-                    mListener.SendMessage();
-                }
+                if (mListener != null) mListener.onSendData("HELLOW");
             }
         });
         return mView;
@@ -77,7 +92,7 @@ public class Testing extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
-        public void SendMessage();
+        public void onSendData(String Data);
     }
 
 }

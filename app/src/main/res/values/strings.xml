@@ -36,5 +36,23 @@
     <string name="JoyStick_Right">Right</string>
     <string name="JoyStick_Front_Right">Front - Right</string>
 
+    <!--Testing Strings-->
+    <string name="Testing_edit">You can edit this commands by accessing Settings</string>
+    <string name="Testing_Command">Command</string>
+    <string name="Testing_Button1">Button 1</string>
+    <string name="Testing_Button2">Button 2</string>
+    <string name="Testing_Button3">Button 3</string>
+    <string name="Testing_Button4">Button 4</string>
+    <string name="Testing_Button5">Button 5</string>
+    <string name="Testing_Button6">Button 6</string>
+    <string name="Testing_Button7">Button 7</string>
+    <string name="Testing_Button8">Button 8</string>
+    <string name="Testing_Button9">Button 9</string>
+    <string name="Testing_Button10">Button 10</string>
+    <string name="Testing_Button11">Button 11</string>
+    <string name="Testing_Button12">Button 12</string>
+    <string name="Testing_Button13">Button 13</string>
+    <string name="Testing_Button14">Button 14</string>
+    <string name="Testing_Button15">Button 15</string>
 
 </resources>

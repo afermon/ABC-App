@@ -35,7 +35,7 @@ import java.util.UUID;
 
 public class Core extends ActionBarActivity
         implements  Testing.OnFragmentInteractionListener,Home.OnHomeListener,
-        NavigationDrawerCallbacks {
+        Controls.OnCommunicationListener, NavigationDrawerCallbacks {
     private Toolbar mToolbar;
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private static final String TAG = "Andruino";
@@ -165,14 +165,13 @@ public class Core extends ActionBarActivity
         //DisconnectBluetooth();
     }
 
-    public void SendMessage(){//JUST TESTING
-        mConnectedThread.SendData("Testing");
+    public void onSendData (String Data) {
+        mConnectedThread.SendData(Data);
     }
-
     private void ComFragments(String msg){
-        //TODO: implement method Active fragment
-
+       /** GET INFO**/
     }
+
 
     private void AddLog(int mTYPE, String MSG){
         Log.d(TAG, "(" + mTYPE + ") "+MSG);
