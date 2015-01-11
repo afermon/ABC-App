@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.fermongroup.app.Controls">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="bottom">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/TextjoystickA"
+                android:textAlignment="center" />
+
+            <com.fermongroup.app.Joystick
+                android:id="@+id/joystickA"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="bottom">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/TextjoystickB"
+                android:textAlignment="center" />
+
+            <com.fermongroup.app.Joystick
+                android:id="@+id/joystickB"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>
