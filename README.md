@@ -1,6 +1,5 @@
-# Arduino Bluetooth Control App for android (3.0 and up)
-Arduino control trough serial bluetooth comands
-
+# Arduino Bluetooth Control App for android (Still in development)
+Arduino control through serial bluetooth comands
 # Tested using a HC-06 Serial Bluetooth Module
 
 This App is desingned by Alex Fermon and is licensed under 
