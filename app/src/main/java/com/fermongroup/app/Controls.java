@@ -27,6 +27,10 @@ public class Controls extends Fragment {
     private Joystick joystickB;
     private TextView TextjoystickA;
     private TextView TextjoystickB;
+    private TextView AnglejoystickA;
+    private TextView AnglejoystickB;
+    private TextView PowerjoystickA;
+    private TextView PowerjoystickB;
     //private OnFragmentInteractionListener mListener;
 
     /**
@@ -67,51 +71,54 @@ public class Controls extends Fragment {
         View rootView = inflater.inflate(R.layout.layout_controls, container, false);
         joystickA = (Joystick) rootView.findViewById(R.id.joystickA);
         TextjoystickA = (TextView) rootView.findViewById(R.id.TextjoystickA);
+        PowerjoystickA = (TextView) rootView.findViewById(R.id.PowerjoystickA);
+        AnglejoystickA = (TextView) rootView.findViewById(R.id.AnglejoystickA);
         joystickB = (Joystick) rootView.findViewById(R.id.joystickB);
         TextjoystickB = (TextView) rootView.findViewById(R.id.TextjoystickB);
+        PowerjoystickB = (TextView) rootView.findViewById(R.id.PowerjoystickB);
+        AnglejoystickB = (TextView) rootView.findViewById(R.id.AnglejoystickB);
         // Listener of events, it'll return the angle in graus and power in percents
         // return to the direction of the moviment
         joystickA.setOnJoystickMoveListener(new OnJoystickMoveListener() {
             @Override
             public void onValueChanged(int angle, int power, int direction) {
-                //angleTextView.setText(" " + String.valueOf(angle) + "°");
-                //powerTextView.setText(" " + String.valueOf(power) + "%");
+                AnglejoystickA.setText(" " + String.valueOf(angle) + "°");
+                PowerjoystickA.setText(" " + String.valueOf(power) + "%");
                 switch (direction) {
                     case Joystick.FRONT:
-
-                        TextjoystickA.setText("Front");
+                        TextjoystickA.setText(R.string.JoyStick_Front);
                         break;
 
                     case Joystick.FRONT_RIGHT:
-                        TextjoystickA.setText("Front Right");
+                        TextjoystickA.setText(R.string.JoyStick_Front_Right);
                         break;
 
                     case Joystick.RIGHT:
-                        TextjoystickA.setText("right");
+                        TextjoystickA.setText(R.string.JoyStick_Right);
                         break;
 
                     case Joystick.RIGHT_BOTTOM:
-                        TextjoystickA.setText("right bottom");
+                        TextjoystickA.setText(R.string.JoyStick_Bottom_Right);
                         break;
 
                     case Joystick.BOTTOM:
-                        TextjoystickA.setText("bottom");
+                        TextjoystickA.setText(R.string.JoyStick_Bottom);
                         break;
 
                     case Joystick.BOTTOM_LEFT:
-                        TextjoystickA.setText("bottom left");
+                        TextjoystickA.setText(R.string.JoyStick_Left_Bottom);
                         break;
 
                     case Joystick.LEFT:
-                        TextjoystickA.setText("left");
+                        TextjoystickA.setText(R.string.JoyStick_Left);
                         break;
 
                     case Joystick.LEFT_FRONT:
-                        TextjoystickA.setText("left_front");
+                        TextjoystickA.setText(R.string.JoyStick_Front_Left);
                         break;
 
                     default:
-                        TextjoystickA.setText("Center");
+                        TextjoystickA.setText(R.string.JoyStick_Center);
 
                 }
             }
@@ -120,44 +127,43 @@ public class Controls extends Fragment {
         joystickB.setOnJoystickMoveListener(new OnJoystickMoveListener() {
             @Override
             public void onValueChanged(int angle, int power, int direction) {
-                //angleTextView.setText(" " + String.valueOf(angle) + "°");
-                //powerTextView.setText(" " + String.valueOf(power) + "%");
+                PowerjoystickB.setText(" " + String.valueOf(angle) + "°");
+                AnglejoystickB.setText(" " + String.valueOf(power) + "%");
                 switch (direction) {
                     case Joystick.FRONT:
-
-                        TextjoystickB.setText("Front");
+                        TextjoystickB.setText(R.string.JoyStick_Front);
                         break;
 
                     case Joystick.FRONT_RIGHT:
-                        TextjoystickB.setText("Front Right");
+                        TextjoystickB.setText(R.string.JoyStick_Front_Right);
                         break;
 
                     case Joystick.RIGHT:
-                        TextjoystickB.setText("right");
+                        TextjoystickB.setText(R.string.JoyStick_Right);
                         break;
 
                     case Joystick.RIGHT_BOTTOM:
-                        TextjoystickB.setText("right bottom");
+                        TextjoystickB.setText(R.string.JoyStick_Bottom_Right);
                         break;
 
                     case Joystick.BOTTOM:
-                        TextjoystickB.setText("bottom");
+                        TextjoystickB.setText(R.string.JoyStick_Bottom);
                         break;
 
                     case Joystick.BOTTOM_LEFT:
-                        TextjoystickB.setText("bottom left");
+                        TextjoystickB.setText(R.string.JoyStick_Left_Bottom);
                         break;
 
                     case Joystick.LEFT:
-                        TextjoystickB.setText("left");
+                        TextjoystickB.setText(R.string.JoyStick_Left);
                         break;
 
                     case Joystick.LEFT_FRONT:
-                        TextjoystickB.setText("left_front");
+                        TextjoystickB.setText(R.string.JoyStick_Front_Left);
                         break;
 
                     default:
-                        TextjoystickB.setText("Center");
+                        TextjoystickB.setText(R.string.JoyStick_Center);
                 }
             }
         }, Joystick.DEFAULT_LOOP_INTERVAL);

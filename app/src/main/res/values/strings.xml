@@ -22,4 +22,19 @@
     <string name="search">Search</string>
     <string name="connect">Connect</string>
 
+    <!--Joystick Strings-->
+    <string name="JoyStick_Position">Position</string>
+    <string name="JoyStick_Angle">Angle</string>
+    <string name="JoyStick_Power">Power</string>
+    <string name="JoyStick_Center">Center</string>
+    <string name="JoyStick_Front">Front</string>
+    <string name="JoyStick_Front_Left">Front - Left</string>
+    <string name="JoyStick_Left">Left</string>
+    <string name="JoyStick_Left_Bottom">Left - Bottom</string>
+    <string name="JoyStick_Bottom">Bottom</string>
+    <string name="JoyStick_Bottom_Right">Bottom - Right</string>
+    <string name="JoyStick_Right">Right</string>
+    <string name="JoyStick_Front_Right">Front - Right</string>
+
+
 </resources>
