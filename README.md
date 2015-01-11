@@ -1,4 +1,4 @@
-# Arduino-Bluetooth-Control-App
+# Arduino Bluetooth Control App for android (3.0 and up)
 Arduino control trough serial bluetooth comands
 
 This App is desingned by Alex Fermon and is licensed under 
