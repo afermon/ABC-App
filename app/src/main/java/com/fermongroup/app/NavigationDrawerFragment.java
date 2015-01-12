@@ -143,6 +143,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
         items.add(new NavigationItem(getString(R.string.title_control), getResources().getDrawable(R.drawable.gamepad)));
         items.add(new NavigationItem(getString(R.string.testing), getResources().getDrawable(R.drawable.testing)));
         items.add(new NavigationItem(getString(R.string.title_logs), getResources().getDrawable(R.drawable.logs)));
+        items.add(new NavigationItem(getString(R.string.action_settings), getResources().getDrawable(R.drawable.config)));
         items.add(new NavigationItem(getString(R.string.title_about), getResources().getDrawable(R.drawable.info)));
         return items;
     }

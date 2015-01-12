@@ -21,4 +21,7 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
+    <style name="AppDialog" parent="Theme.AppCompat.Dialog">
+
+    </style>
 </resources>

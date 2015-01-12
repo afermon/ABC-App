@@ -1,6 +1,5 @@
 package com.fermongroup.app;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -8,18 +7,14 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.Toast;
 
@@ -130,6 +125,16 @@ public class Core extends ActionBarActivity
                 break;
             case 4:
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+                Intent settingsActivity = new Intent(getBaseContext(),
+                        Settings.class);
+                startActivity(settingsActivity);
+                /*fragmentManager.beginTransaction()
+                        .replace(R.id.container, new Settings()).commit();
+                OnFragment = new Settings();*/
+                mTitle = getString(R.string.action_settings);
+                break;
+            case 5:
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
                 OnFragment = new About();
                 mTitle = getString(R.string.title_about);
                 break;
@@ -180,7 +185,7 @@ public class Core extends ActionBarActivity
     }
 
     public void UpdateLogFragment () {
-        if (OnFrag == 2){
+        if (OnFrag == 3){
             Logs LogF = (Logs) getSupportFragmentManager().findFragmentById(R.id.container);
             if (LogF != null) {
                 LogF.UpdateLog();
